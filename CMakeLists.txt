@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
+
 project(gringofts)
 set(Gringofts_VERSION_MAJOR 1)
 set(Gringofts_VERSION_MINOR 0)
