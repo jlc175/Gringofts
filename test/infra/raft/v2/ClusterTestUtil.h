@@ -38,6 +38,8 @@ class SyncRequestHandle : public RequestHandle {
   void failOver() override {}
   void forwardResponseReply(void *response) override {}
   grpc::ServerContext *getContext() override {return nullptr;}
+  std::string getRequestNamespace() const override { return "";}
+  ~SyncRequestHandle() override { reportLatency(); }
   void fillResultAndReply(
       uint32_t code,
       const std::string &message,
